@@ -1,0 +1,93 @@
+<html>
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+	</head>
+
+	<body>
+
+		<table>
+			<tr>
+				<td>
+					<img src="sm.jpg" width="100px">
+				</td>
+
+				<td>
+					<p> <strong>Seu Madruga</strong></p>
+				</td>
+			</tr>
+		</table>
+
+		<p>A vingança nunca é plena, mata a alma e envenena.</p>
+		
+		<table id="likes">
+			<tr>
+				<td id="textlike"></td>
+				<td><button id="like">Like</button></td>
+			</tr>
+		</table>
+
+		<table id="coments">
+			<thead>Comentários:</thead>
+			<tbody id="comentarios">
+
+			</tbody>		
+		</table>
+
+		<table>
+			<tr>
+				<td><textarea id="comentario" name="comentario" rows="4" cols="40"></textarea></td>
+				<td><button id="comentar">Comentar</button></td>
+			</tr>	
+		</table>
+
+
+		<script type="text/javascript">
+
+			var likeButton = document.getElementById("like");
+			var numberLikes = 0;
+			document.getElementById("textlike").appendChild(document.createTextNode(numberLikes + " people like this"));
+
+			likeButton.onclick = function () {
+				numberLikes++;
+				document.getElementById("textlike").innerHTML = numberLikes + " people like this";
+			}
+
+
+			var comentarios = document.getElementById("comentarios");
+
+			document.getElementById("comentar").onclick = function () {
+
+				var text = String(document.getElementById("comentario").value);
+
+				var newcomentario = comentarios.appendChild(document.createElement("tr"));
+				
+				newcomentario.setAttribute("id", "newcomentario");
+				
+				newcomentario.appendChild(document.createElement("td")).innerHTML = text;
+
+			}
+
+		</script>
+
+		<style type="text/css">
+			body, p, thead, table{
+				font-size: 18px;
+			}
+
+			#likes{
+				margin-bottom: 20px;
+			}
+
+			#coments{
+				width: 100%;
+			}
+
+			#newcomentario{
+				width: 700px;
+				background: lightgray;
+			}
+		</style>
+
+	</body>
+</html>
