@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title></title>
+		<title>Seu Madruga</title>
 		<meta charset="UTF-8">
 	</head>
 
@@ -59,13 +59,14 @@
 			document.getElementById("comentar").onclick = function () {
 
 				var text = String(document.getElementById("comentario").value);
-
-				var newcomentario = comentarios.appendChild(document.createElement("tr"));
 				
-				newcomentario.setAttribute("id", "newcomentario");
+				if(text != ""){
+					var newcomentario = comentarios.appendChild(document.createElement("tr"));
 				
-				newcomentario.appendChild(document.createElement("td")).innerHTML = text;
+					newcomentario.setAttribute("class", "newcomentario");
 
+					newcomentario.appendChild(document.createElement("td")).innerHTML = text;
+				}
 			}
 
 		</script>
@@ -83,7 +84,7 @@
 				width: 100%;
 			}
 
-			#newcomentario{
+			.newcomentario{
 				width: 700px;
 				background: lightgray;
 			}
