@@ -1,0 +1,108 @@
+html{
+	background: white;
+	font-family: arial;
+}
+
+body{
+	background: #ffbb00;
+	width: 100%;
+	padding-top: 15px;
+	margin: 0px;
+}
+
+p{
+	margin-left: 10px;
+}
+
+h1{
+	margin-left: 15px;
+	color: white;
+}
+
+a{
+	margin: 25px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.horizontalLine img{
+	height: 100%;
+	cursor: pointer;
+}
+
+.verticalLine img{
+	width: 100%;
+	cursor: pointer;
+}
+
+.point{
+	width: 6px;
+}
+
+.quadrado img{
+	width: 57px;
+}
+
+.box{
+	width: 200px;
+	border: 2px solid #000;
+	border-radius: 10px;
+	font-size: 20px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	background: #ff9900;
+
+}
+
+#tgame{
+	border: 5px solid #333;
+	border-radius: 10px;
+	padding: 20px;
+	margin-left: 10px;
+	background: white;
+}
+
+#name1{
+	color: #40FF40;
+	font-size: 20px;
+	font-style: bold;
+	margin-bottom:0px;
+}
+
+#name2{
+	color: #FFFF00;
+	font-size: 20px;
+	font-style: bold;
+	margin-bottom:0px;
+}
+
+#jog1{
+	padding: 0px;
+	font-size: 20px;
+	font-weight: 900;
+	margin-top: 0px;
+	margin-left: 20px;
+}
+
+#jog2{
+	padding: 0px;
+	font-size: 20px;
+	font-weight: 900;
+	margin-top: 0px;
+	margin-left: 20px;
+}
+
+#help{
+	margin-top: 10px;
+	margin-left: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 15px;
+	text-align: justify;
+}
+
+#tdgame{
+	text-align: center;
+	font-size: 60px;
+	text-decoration: bold;
+}

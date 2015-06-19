@@ -2,12 +2,55 @@
 	<head>
 		<title>Jogo dos Pontos</title>
 		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="estilo.css">
 	</head>
 
 	<body>
 		
+		<h1>Jogo dos Pontos</h1>
 
-		
+		<table>
+			<tr>
+				<td id="tdgame">
+					<table cellpadding="0" cellspacing="0" id="tgame">
+			        	<tbody id="game"></tbody>
+			        </table>
+				</td>
+				<td id="side">
+					<div class="box">
+						<p >
+							É a vez do: <br>
+							<j id="vez">Jogador 1</j>
+						</p>
+					</div>
+
+					<div class="box">
+						<p id="name1">Jogador 1:</p>
+						<p id="jog1">0</p>
+						<p id="name2">Jogador 2:</p>
+						<p id="jog2">0</p>
+					</div>
+
+					<div class="box">
+						<a href="index.html">Reiniciar o Jogo</a>
+					</div>
+
+					<div class="box">
+						<p id="help">
+							<b>Como jogar</b><br>
+							Dois jogadores se revezam desenhando linhas entre dois pontos,
+							cada jogador que completar um quadrado ganha um ponto e tem ganha
+							mais uma jogada. O jogo acaba quando todos os quadrados forem formados.
+							Vence quem completou mais quadrados.
+						</p>
+					</div>
+				</td>
+			</tr>
+		</table>
+
+        
+
+		<script src="points.js"/></script>
 	</body>
 
 </html>
