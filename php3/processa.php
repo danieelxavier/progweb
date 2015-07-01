@@ -1,3 +1,14 @@
+<?php
+	session_start();
+	 
+	if (empty($_SESSION['start'])) {
+	 
+		header('Location: index.php');
+		exit();
+	}
+	
+?>
+
 <?php 
 	
 	//posts
@@ -22,7 +33,8 @@
 	}
 
 	//se ocorrer tudo bem
-	echo "<p>Comentário enviado.</p>";
+	echo "<p>Comentário enviado.</p> <br><br>";
+	echo "<a href='inicio.php'>Voltar</a>";
 
 	//inserindo na tabela
 	$sql = "INSERT INTO opinioes VALUES('$nome', '$sexo', '$comentario')";
