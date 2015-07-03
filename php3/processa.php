@@ -13,8 +13,14 @@
 	
 	//posts
 	$nome = $_POST["nome_completo"];
-	$sexo = $_POST["sexo"];
 	$comentario = $_POST["comentario"];
+
+	if(empty($_POST["sexo"])){
+		die("<p>O Sexo não foi selecionadoo.</p> <br> <a href='inicio.php'>Voltar</a>");
+	}
+	else{
+		$sexo = $_POST["sexo"];
+	}
 
 	//criando conexão
 	$conexao = mysql_connect("localhost", "root", "");

@@ -7,8 +7,9 @@
 		exit();
 	}
 	else{
-		echo "Variáveis de sessão: <br>";
-		echo "Start: " . $_SESSION['start'] . "<br> <br>";
+		echo "<div style='color:white; background:black; text-align:center; margin-bottom:5px;'>
+				Variáveis de sessão.......";
+		echo "Start: " . $_SESSION['start'] . "<br></div>";
 	}
 	
 ?>
@@ -20,63 +21,45 @@
 		<meta name="description" content="Primeiro exercício de Programação Web 2015/1" />
 		<meta name="author" content="Daniel Xavier" />
 		<link rel="stylesheet" type="text/css" href="estilo.css">
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 		<title>PHP 3 - Início</title>
 	</head>
 
-	<body>
-		<a href="processa_logout.php">Logout</a>
+	<body class="corpo">
 
-		<h1>Este é um grande cabeçalho</h1>
-		<h3>E este aqui é um pequeno cabeçalho</h3>
+		<div class="container">
 
-		<p>Aqui coloquei um paragrafo com algum texto aleatório, e a seguir vou inserir um 
-			formulário dentro de uma tabela. Além disso, aqui vai um 
-			link: <a href="http://icomp.ufam.edu.br/david">http://icomp.ufam.edu.br/david</a>.</p>
+			<a href="processa_logout.php">Logout</a>
 
-		<form action="processa.php" method="post">
+			<h1>Este é um grande cabeçalho</h1>
+			<h3>E este aqui é um pequeno cabeçalho</h3>
 
-			<table border="0">
-				<tr>
-					<td>
-						<label for="nome_completo">Seu nome</label>
-					</td>
-					<td>
-						<input id="nome_completo" type="text" name="nome_completo">
-					</td>
-				</tr>
+			<p>Aqui coloquei um paragrafo com algum texto aleatório, e a seguir vou inserir um formulário dentro de <br>
+				uma tabela. Além disso, aqui vai um link: <a href="http://icomp.ufam.edu.br">http://icomp.ufam.edu.br</a>.</p>
 
-				<tr>
-					<td>
-						<label for="sexo">Seu sexo</label>
-					</td>
-					<td>
-						<select id="sexo" name="sexo" >
-							<option value="masculino">Masculino</option>
-							<option value="feminino">Feminino</option>
-						</select>
-					</td>	
-				</tr>
+			<form class="form-signin" action="processa.php" method="post" id="form_coment">
 
-				<tr>
-					<td>
-						<label for="comentario">Seus <br/>comentários</label>
-					</td>
-					<td>
-						<textarea id="comentario" name="comentario" rows="6" cols="45"></textarea>
-					</td>
-				</tr>	
+				<h3>Enviar Comentário</h2>
 
-				<tr>
-					<td></td>
-					<td>
-						<input type="submit" name="submit" value="Enviar">
-					</td>
-				</tr>
+				<label for="login" class="sr-only">Seu nome</label>
+				
+				<input type="text" id="nome_completo" class="form-control" placeholder="Seu nome" name="nome_completo" required autofocus>
+				
+				<label for="senha" class="sr-only">Seu sexo</label>
+				
+				<select id="sexo" name="sexo" class="form-control">
+					<option value="" disabled selected>Sexo</option>
+					<option value="masculino">Masculino</option>
+					<option value="feminino">Feminino</option>
+				</select>
 
-			</table>
+				<label for="login" class="sr-only">Seus Comentários</label>
+				
+				<textarea class="form-control" rows="5" id="comment" name="comentario" placeholder="Comentários" required autofocus></textarea>
 
-
-		</form>
+				<button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">Enviar</button>
+			</form>
+		</div>
 
 	</body>
 
