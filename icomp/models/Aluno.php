@@ -78,5 +78,13 @@ class Aluno extends \yii\db\ActiveRecord
     }
 
 
+    public function beforeSave()
+    {
+        // faz com que todos os nomes sejam salvos no banco com letras maiusculas
+        $this->setAttribute('nome', strtoupper($this->nome)); 
+        
+        return true;
+    }
+
 
 }
